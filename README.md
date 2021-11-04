@@ -76,3 +76,12 @@ ddpg_agent.py - contains the code for the ddpg_agent and experience replay buffe
 model.py - contains the actor and critic models. 
 checkpoint_actor.pth - trained actor model
 checkpoint_critic.pth - trained critic model
+
+#5. Incase code doesn't run 
+Make sure in main_one.py the code below points to the right path of the "Reacher.x86_64"
+
+   env = UnityEnvironment(file_name='./Reacher_Linux_NoVis/Reacher.x86_64')
+
+
+
+

@@ -46,7 +46,7 @@ scores = np.zeros(num_agents)                          # initialize the score (f
     Train = 1 for training the agent
     Train = 0 for testing the agent
 """
-Train = 1
+Train = 0
 train_n_episode = 2000
 test_n_episode = 100
 
@@ -69,7 +69,7 @@ if Train == 1:
             score = 0                                              # initialize score
             for t in range(max_t):                                 # start step
                 #actions = np.random.randn(num_agents, action_size)
-                actions = agent.act(states[0], add_noise=False)                     # select an action (for each agent)
+                actions = agent.act(states[0], add_noise=True)                     # select an action (for each agent)
                 actions = np.array(actions).reshape(1,4)           # convert to np array
 
                 env_info = env.step(actions)[brain_name]           # send action to tne environment
@@ -126,7 +126,7 @@ if Train == 0:
             agent.reset()                                          # reset agent
             score = 0                                              # reset score
             for t in range(max_t):                                 # start of step
-                actions = agent.act(states[0])                     # select an action
+                actions = agent.act(states[0], add_noise=False)                     # select an action
                 actions = np.array(actions).reshape(1,4)           # change action to np array
 
                 env_info = env.step(actions)[brain_name]           # send all actions to tne environment
