@@ -1,4 +1,4 @@
-#Project Name: Continuous Control
+#Project Name: Continuous Control (Option 1)
 #1. Description of Environment
 We train a 2 DOF robotic arm to reach a particular target in the field. The reward is the sum of reward_dist and reward_ctrl. reward_dist is the distance between the fingertip of the robot and the target. reward_ctrl is the sum of squared actions. The state space is 33 dimensions. The action space is 2 dimensions and the values can be between -1 and 1. The action controls the joints of the robot. The problem is considered solved if the average reward is at least 30+ over 100 episodes. 
 
